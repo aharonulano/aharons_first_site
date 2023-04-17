@@ -1,7 +1,17 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Home = () => {
+
+const {resta_ar}=useSelector(
+  (store)=>store.restaReducer
+)
+useEffect(()=>{
+  dispatch(getRestaurants())
+},[])
+console.log(resta_ar);
   return (
+
     <div id="main-wraper">
     <div className="p-10 bg-gradient-to-r from-Slate-700 to-Sky-950">
       <div className="container mx-auto ">

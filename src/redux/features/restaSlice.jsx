@@ -10,7 +10,7 @@ const restaSlice = createSlice({
   name: "restaurants",
   initialState,
   reducers: { 
-    getRestaurant: (state, action) => {
+    getRestaurants: (state, action) => {
       const resta = localStorage.getItem('resta')
       state.resta_ar = resta ? JSON.parse(resta) : restaurants;
       saveInLocalStorage(state.resta_ar);

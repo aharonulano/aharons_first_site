@@ -44,20 +44,24 @@ console.log(resta_ar);
         </div>
       </div>
     </div>
-
+    {resta_ar.map(
+                ({id,name,city,price,main_image,cuisine,images,description},index) =>(
+                  <div key={index} className="card bg-base-100 shadow-xl w-0">
+                  <figure><img style={{width : "150px"}} src={main_image} alt="Album" /></figure>
+                  <div className="card-body ">
+                    <h2 className="card-title">{name}</h2>
+                    <p><span>******</span> <span className="font-extrabold">|</span> <span>77 reviews</span> </p>
+                    <p><label></label> <span className="font-bold">$$$</span><span >$</span> <label>{city}</label> </p>
+                    <p className='font-extrabold' >ordered 3 times today</p>
+                    <div className="card-actions justify-end">
+                      <button className="btn btn-primary">Order new</button>
+                    </div>
+                  </div>
+                </div>
+                                    )
+            )}
       <div className="container py-6 gap-6 grid grid-cols-3 mx-auto ">
-            <div className="card bg-base-100 shadow-xl w-0">
-            <figure><img style={{width : "150px"}} src="https://image-tc.galaxy.tf/wijpeg-4z8fjv7bnp0dujenef6lp12xt/rooms-hero-1-optimised.jpg?width=1980&height=890" alt="Album" /></figure>
-            <div className="card-body ">
-              <h2 className="card-title">name</h2>
-              <p><span>******</span> <span className="font-extrabold">|</span> <span>77 reviews</span> </p>
-              <p><label></label> <span className="font-bold">$$$</span><span >$</span> <label>city</label> </p>
-              <p className='font-extrabold' >ordered 3 times today</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Order new</button>
-              </div>
-            </div>
-          </div>
+       
     </div>
   </div>
   )

@@ -1,7 +1,9 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getRestaurants } from '../redux/features/restaSlice'
 
 const Home = () => {
+const dispatch= useDispatch()
 
 const {resta_ar}=useSelector(
   (store)=>store.restaReducer
@@ -45,7 +47,7 @@ console.log(resta_ar);
 
       <div className="container py-6 gap-6 grid grid-cols-3 mx-auto ">
             <div className="card bg-base-100 shadow-xl w-0">
-            <figure><img  src="https://image-tc.galaxy.tf/wijpeg-4z8fjv7bnp0dujenef6lp12xt/rooms-hero-1-optimised.jpg?width=1980&height=890" alt="Album" /></figure>
+            <figure><img style={{width : "150px"}} src="https://image-tc.galaxy.tf/wijpeg-4z8fjv7bnp0dujenef6lp12xt/rooms-hero-1-optimised.jpg?width=1980&height=890" alt="Album" /></figure>
             <div className="card-body ">
               <h2 className="card-title">name</h2>
               <p><span>******</span> <span className="font-extrabold">|</span> <span>77 reviews</span> </p>

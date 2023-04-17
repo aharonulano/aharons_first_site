@@ -5,7 +5,7 @@ const Page404 = () => {
   return (
     <div
       className="
-    flex-1
+    flex
     items-center
     justify-center
     w-screen

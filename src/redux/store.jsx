@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import restaReducer from "./featureas/restaSlice";
+import restaReducer from "./features/restaSlice";
 
 
 const myStore = configureStore({

@@ -15,11 +15,10 @@ const restaSlice = createSlice({
       state.resta_ar = resta ? JSON.parse(resta) : restaurants;
       saveInLocalStorage(state.resta_ar);
     },
-    // addTodo: (state, action) => {
-    //   const todoObj = action.payload;
-    //   todoObj.id = Date.now();
-    //   todoObj.isCompleted = false;
-
+    // addresta: (state, action) => {
+    //   const restaObj = action.payload;
+    //   restaObj.id = Date.now();
+    //   
     //   console.log(todoObj);
     //   state.todos.push(todoObj);
     //   saveInLocalStorage(state.todos)

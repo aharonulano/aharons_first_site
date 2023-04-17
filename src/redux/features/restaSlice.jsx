@@ -39,5 +39,5 @@ const saveInLocalStorage = (resta_ar) => {
 }
 
 
-export const { getRestaurant } = restaSlice.actions;
+export const { getRestaurants } = restaSlice.actions;
 export default restaSlice.reducer;
